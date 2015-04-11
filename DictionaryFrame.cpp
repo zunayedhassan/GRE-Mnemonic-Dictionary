@@ -391,7 +391,7 @@ void DictionaryFrame::_displaySelectedWordDetails(string lookingFor, bool isDisp
     }
 
     // Query for that word or something similar to that word user asked for
-    string sql = "SELECT * FROM dictionary WHERE word LIKE '%" + lookingFor + "%';";
+    string sql = "SELECT * FROM dictionary WHERE word LIKE '" + lookingFor + "%';";
     rc = sqlite3_prepare_v2(db, sql.data(), -1, &res, 0);
 
     // If database is empty
